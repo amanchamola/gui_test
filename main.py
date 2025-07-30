@@ -33,39 +33,67 @@ folders = [
     "pictures/beautiful_tani",
 ]
 
-image_paths = [
-    os.path.join(folder, f)
-    for folder in folders
-    for f in os.listdir(folder)
-    if f.endswith('.jpeg') and os.path.isfile(os.path.join(folder, f))
-]
+# image_paths = [
+#     os.path.join(folder, f)
+#     for folder in folders
+#     for f in os.listdir(folder)
+#     if f.endswith('.jpeg') and os.path.isfile(os.path.join(folder, f))
+# ]
 
+image_captions = {
+    'pictures/baby_tani/WhatsApp Image 2025-07-31 at 12.25.19 AM (2).jpeg': "Baby Tani 🎂🎈 The most cutest kid i've ever seen",
+    'pictures/baby_tani/WhatsApp Image 2025-07-31 at 12.21.58 AM (2).jpeg': "My favourite Picture of little Tani 📸",
+    'pictures/baby_tani/WhatsApp Image 2025-07-31 at 12.25.19 AM (1).jpeg': "HAHA GuChu PUCHU BACHA ekdum ❤️",
+    'pictures/baby_tani/WhatsApp Image 2025-07-31 at 12.25.19 AM.jpeg': "In the words of sir DJ Khaled: Another One !!",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.57 AM.jpeg': "Family Time: 🏡 I know how much you miss them on your birthday. Aunty holding two shaitans",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.58 AM.jpeg': "Pragyata Saya: DIDI HAPPY BIRTHDAY, I LOVE YOUU but aapmei dimaag ki kami hai",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.57 AM (1).jpeg': "Such a sweet Family Picture. Uncle looks tired after dealing with two bandars",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.50.13 AM (2).jpeg': "Pragyata: DIDI I MISS YOU bolna bhul gyi thi 😭",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.25.19 AM (3).jpeg': "RAKHI TIME: With brothers who'll eventually turn to the dark side **liverpool joke** 😝",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.58 AM (1).jpeg': "Tani: BIG SISTER VIBES",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.58 AM (3).jpeg': "!! Another One !!",
+    'pictures/Family/WhatsApp Image 2025-07-31 at 12.21.57 AM (2).jpeg': "hahahahahahaahahahahha 😝 😝 😝 😝 Guess who sent me this",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.50.13 AM.jpeg': "FRIENDS TIME: ARADHYA GAURI Feature toh must hai 👭❤❤",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.46.49 AM.jpeg': "SADHVI Feature bhi aagya 👭❤",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.48.26 AM.jpeg': "Gauri Aradhya ke saath spam hai by god",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.38.58 AM.jpeg': "I'm out of Captions Now 😰 😰",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.46.05 AM.jpeg': "Rishikesh Feature: I know how happy you were during this trip ❤❤",
+    'pictures/friends/WhatsApp Image 2025-07-31 at 12.50.13 AM (1).jpeg': "RAFTING CHLENGE HUM BHIII 🚤 🚤",
+    'pictures/beautiful_tani/WhatsApp Image 2025-07-31 at 12.46.04 AM (1).jpeg': "BEAUTIFUL TANI TIME: I mean i can look at this picture for days 📸",
+    'pictures/beautiful_tani/WhatsApp Image 2025-07-31 at 12.46.04 AM.jpeg': "STUNNINGGGGGG ❤❤",
+    'pictures/beautiful_tani/WhatsApp Image 2025-07-31 at 12.38.58 AM (3).jpeg': "How did your parents made you this beautiful? 😭 😭 ",
+    'pictures/beautiful_tani/WhatsApp Image 2025-07-31 at 12.38.58 AM (1).jpeg': "I'm Lost for Words, No Seriously I am 😭 😭",
+    'pictures/beautiful_tani/WhatsApp Image 2025-07-31 at 12.38.58 AM (2).jpeg': "BYE BYE Beautiful 22 year old Tani, Welcome to the 23 year old Club ❤❤"
+}
 
-captions = [
-    "Baby Tani 🎂🎈 The most cutest kid i've ever seen",
-    "My favourite Picture of little Tani 📸",
-    "HAHA GuChu PUCHU BACHA ekdum ❤️",
-    "In the words of sir DJ Khaled: Another One !!",
-    "Family Time: 🏡 I know how much you miss them on your birthday. Aunty holding two shaitans",
-    "Pragyata Saya: DIDI HAPPY BIRTHDAY, I LOVE YOUU but aapmei dimaag ki kami hai",
-    "Such a sweet Family Picture. Uncle looks tired after dealing with two bandars",
-    "Pragyata: DIDI I MISS YOU bolna bhul gyi thi 😭",
-    "RAKHI TIME: With brothers who'll eventually turn to the dark side **liverpool joke** 😝",
-    "Tani: BIG SISTER VIBES",
-    "!! Another One !!",
-    "hahahahahahaahahahahha 😝 😝 😝 😝 Guess who sent me this",
-    "FRIENDS TIME: ARADHYA GAURI Feature toh must hai 👭❤❤",
-    "SADHVI Feature bhi aagya 👭❤",
-    "Gauri Aradhya ke saath spam hai by god",
-    "I'm out of Captions Now 😰 😰",
-    "Rishikesh Feature: I know how happy you were during this trip ❤❤",
-    "RAFTING CHLENGE HUM BHIII 🚤 🚤",
-    "BEAUTIFUL TANI TIME: I mean i can look at this picture for days 📸",
-    "STUNNINGGGGGG ❤❤",
-    "How did your parents made you this beautiful? 😭 😭 ",
-    "I'm Lost for Words, No Seriously I am 😭 😭",
-    "BYE BYE Beautiful 22 year old Tani, Welcome to the 23 year old Club"
-]
+image_paths = list(image_captions.keys())
+captions = list(image_captions.values())
+
+# captions = [
+#     "Baby Tani 🎂🎈 The most cutest kid i've ever seen",
+#     "My favourite Picture of little Tani 📸",
+#     "HAHA GuChu PUCHU BACHA ekdum ❤️",
+#     "In the words of sir DJ Khaled: Another One !!",
+#     "Family Time: 🏡 I know how much you miss them on your birthday. Aunty holding two shaitans",
+#     "Pragyata Saya: DIDI HAPPY BIRTHDAY, I LOVE YOUU but aapmei dimaag ki kami hai",
+#     "Such a sweet Family Picture. Uncle looks tired after dealing with two bandars",
+#     "Pragyata: DIDI I MISS YOU bolna bhul gyi thi 😭",
+#     "RAKHI TIME: With brothers who'll eventually turn to the dark side **liverpool joke** 😝",
+#     "Tani: BIG SISTER VIBES",
+#     "!! Another One !!",
+#     "hahahahahahaahahahahha 😝 😝 😝 😝 Guess who sent me this",
+#     "FRIENDS TIME: ARADHYA GAURI Feature toh must hai 👭❤❤",
+#     "SADHVI Feature bhi aagya 👭❤",
+#     "Gauri Aradhya ke saath spam hai by god",
+#     "I'm out of Captions Now 😰 😰",
+#     "Rishikesh Feature: I know how happy you were during this trip ❤❤",
+#     "RAFTING CHLENGE HUM BHIII 🚤 🚤",
+#     "BEAUTIFUL TANI TIME: I mean i can look at this picture for days 📸",
+#     "STUNNINGGGGGG ❤❤",
+#     "How did your parents made you this beautiful? 😭 😭 ",
+#     "I'm Lost for Words, No Seriously I am 😭 😭",
+#     "BYE BYE Beautiful 22 year old Tani, Welcome to the 23 year old Club"
+# ]
 
 if 'image_index' not in st.session_state:
     st.session_state.image_index = 0
