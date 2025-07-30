@@ -37,7 +37,7 @@ image_paths = [
     os.path.join(folder, f)
     for folder in folders
     for f in os.listdir(folder)
-    if os.path.isfile(os.path.join(folder, f))
+    if f.endswith('.jpeg') and os.path.isfile(os.path.join(folder, f))
 ]
 
 
@@ -59,7 +59,7 @@ captions = [
     "Gauri Aradhya ke saath spam hai by god",
     "I'm out of Captions Now 😰 😰",
     "Rishikesh Feature: I know how happy you were during this trip ❤❤",
-    "!! ANOTHER ONE !!",
+    "RAFTING CHLENGE HUM BHIII 🚤 🚤",
     "BEAUTIFUL TANI TIME: I mean i can look at this picture for days 📸",
     "STUNNINGGGGGG ❤❤",
     "How did your parents made you this beautiful? 😭 😭 ",
